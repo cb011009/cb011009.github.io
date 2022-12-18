@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Donation Form</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="homeImages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="homeImages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="homeImages/favicon-16x16.png">
+    <link rel="manifest" href="homeImages/site.webmanifest">
+    <link rel="mask-icon" href="homeImages/safari-pinned-tab.svg" color="#23a467">
+    <link rel="shortcut icon" href="homeImages/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="homeImages/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="DonateForm.css" />
+</head>
+<body>
+       
+        <form id="donationForm">
+
+
+            <fieldset>
+                <h2>DONATION FORM</h2><hr />
+                <p class="methoOfPayment"> Select Payment Method:</p>
+                <div class="paymentDetails">
+                    <p class="methoOfPayment">
+
+                        <div>
+                            <input type="radio" id="paypal" name="payment" value="paypal" checked>
+                            <label for="paypal">PayPal<span><img class="paypal" src="homeImages/paypal.png"></span></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="visa" name="payment" value="Visa">
+                            <label for="visa">Visa<span>  <img src="homeImages/visa.png" class="paymentLogo"></span></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="masterCard" name="payment" value="masterCard">
+                            <label for="masterCard">Master Card <span><img src="homeImages/masterCard.png" class="masterCard"></span> </label>
+                        </div>
+
+                    </p>
+
+                </div>
+                <hr />
+                <div class="cardDetails">
+                    <div class="cardOwner">
+                        <p>
+                            <label for="name">CARD OWNER</label><br />
+                            <input type="text" id="name" name="name" required pattern="[A-Za-z ]{1,100}"><br />
+                            <span id="valid" name="validation"></span>
+                        </p>
+
+                    </div>
+                    <div class="address">
+                        <p>
+                            <label for="address">ADDRESS</label><br />
+                            <input type="text" id="address" name="address" required>
+                            <span name="validation"></span>
+                        </p>
+
+                    </div>
+                    <div class="expDate">
+                        <p>
+                            <label for="expiryDate">EXPIERY DATE</label><br />
+                            <input type="month" id="expDate" name="expiryDate" required><br />
+                            <span name="validation"></span>
+                        </p>
+
+                    </div>
+                    <div class="cvc_cvv">
+                        <p>
+                            <label for="cardNumber">CVC/CVV</label><br />
+                            <input type="text" id="cvc" name="cvc" pattern="^[0-9]{3}$" required>
+
+                        </p>
+                        <span name="validation"></span>
+                    </div>
+                    <div class="cardNumber">
+                        <p>
+                            <label for="cardNumber">CARD NUMBER</label><br />
+                            <input type="text" pattern="^[0-9]{16}$" id="cardNumber" name="cardNumber" required>
+
+                        </p>
+                        <span name="validation"></span>
+                    </div>
+
+
+                </div>
+                <hr />
+                <div class="amountButtons">
+                    <p class="selectAmount">Select Amount:</p>
+                    <p>
+
+                        <input type="button" name="amount" value="LKR 100.00" class="amountButton">
+                        <input type="button" name="amount" value="LKR 500.00" class="amountButton">
+                        <input type="button" name="amount" value="LKR 1000.00" class="amountButton">
+                        <input type="button" name="amount" value="LKR 2000.00" class="amountButton">
+                        <input type="button" name="amount" value="LKR 5000.00" class="amountButton">
+                        <input type="button" name="amount" value="LKR 10000.00" class="amountButton">
+                    </p>
+                </div>
+                <p id="donatedAmount"></p><p id="nullAmount"><p id="amountError"></p>
+                <hr />
+
+                <div class="donateFormButtons">
+                    <div class="confirm">
+
+                        <p>
+                            <button id="confirmPayment" type="submit">Confirm Payment</button>
+
+                        </p>
+
+                    </div>
+                    <div class="home">
+                        <p>
+
+                            <a href="index.html" target="_blank" class="homeButton" type="button">Home </a>
+
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+            
+           
+
+        </form>
+        <footer>
+            <!--Reference list:
+
+                    cleanpng.com. (n.d.). Paypal Logo - Unlimited Download. cleanpng.com. 
+                    [online] Available at: https://www.cleanpng.com/png-paypal-logo-computer-icons-payment-paypal-740888/ 
+                    [Accessed 18 Dec. 2022].
+
+                    Inc, M. (n.d.). English: Logo of MasterCard. The logo was used in corporate branding from 1996 to 2006, and on cards from 1996 to July 14, 2016. 
+                    [online] Wikimedia Commons. Available at: https://commons.wikimedia.org/wiki/File:MasterCard_Logo.svg 
+                    [Accessed 18 Dec. 2022].
+
+                    ‌usa.visa.com. (n.d.). POS Guidelines. 
+                    [online] Available at: https://usa.visa.com/run-your-business/accept-visa-payments/posguidelines.html 
+                    [Accessed 18 Dec. 2022].
+
+    ‌
+            -->    ‌
+        </footer>
+
+            <script src="donateJS.js"></script>
+        </body>
+        </html>

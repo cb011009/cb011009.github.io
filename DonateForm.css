@@ -1,0 +1,252 @@
+﻿* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none
+   
+}
+
+body {
+    background-color: rgb(245,245,245);
+}
+
+h2{
+    text-align:center;
+
+}
+
+h3 {
+    font-style: oblique;
+    color: rgb(196, 148, 6);
+ 
+    margin-left: 20px;
+}
+
+#nullAmount, #errorOutput, #amountError {
+    margin-left: 5px;
+    color: rgb(255,69,0);
+}
+
+#donatedAmount {
+    margin-left: 10px;
+}
+
+span {
+    margin-top:5px;
+    margin-left:5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgb(255,69,0);
+}
+
+
+fieldset {
+    border-radius: 8px;
+    background-color: white;
+    border: 0.5px solid grey;
+    margin: 10px;
+}
+
+form {
+    margin-right: 17%;
+    margin-left: 17%;
+}
+
+label {
+   
+    color: rgb(24,24,24);
+    font-weight: bold;
+   
+}
+.donateFormButtons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:30px;
+}
+.donateFormButtons > div {
+    width:50%;
+    
+}
+.home {
+  
+    margin-top:8px;
+    width: 50%;
+    font-weight: normal;
+  
+    
+}
+.homeButton {
+    padding-left: 145px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: rgb(147, 197, 114);
+    color: rgb(14, 1, 1);
+}
+
+    .cardDetails {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 4%;
+    }
+.cardDetails > div {
+    margin-right: 20px;
+  
+}
+.paymentLogo {
+    height:30px;
+    width:58px;
+}
+.masterCard{
+  
+    height: 29px;
+    width: 50px;
+   
+}
+.methoOfPayment, .selectAmount {
+
+    color: rgb(119, 119, 119);
+}
+.methoOfPayment{
+    margin-left:20px;
+}
+.selectAmount {
+        margin-left: 10px;
+    }
+.paypal {
+  
+    height: 30px;
+    width: 35px;
+}
+
+.cardOwner, .address, .expDate, .cardNumber {
+    width: 46%;
+}
+
+.cvc_cvv{
+    width:20%;
+
+ }
+
+.confirm{
+    width:100%;
+}
+
+#address, #name, #expDate, #cvc, #cardNumber {
+    margin-top: 10px;
+    border-width: thin;
+    padding: 8px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+
+div {
+    flex-flow: row wrap;
+}
+.amountButton {
+    margin-left: 6px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: rgb(255,255,255);
+    background-color: rgb(51,179,166);
+    border-radius: 2px;
+    border: none;
+    font-weight: bold;
+    
+}
+#confirmPayment {
+    font-weight: normal;
+    font-size: 15px;
+    border:none;
+    border-radius:15px;
+    background-color: rgb(147, 197, 114);
+    padding:10px;
+    margin-left:10px;
+    width: 85%;
+}
+.paymentDetails {
+    display: flex;
+    flex-wrap:wrap;
+    flex-flow: row;
+    margin-bottom:15px;
+}
+
+@media (max-width: 800px) {
+    .cardDetails {
+        
+        padding-left: 0%;
+    }
+    .cardDetails > div {
+        margin: 0px;
+        
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .cardOwner, .address, .cardNumber {
+        width: 100%;
+    }
+    #name, #address, #cardNumber {
+        width: 95%;
+    }
+    .cvc_cvv {
+        padding-top:2px;
+        width: 32%;
+        padding-left:13%;
+    }
+    .amountButton {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        color: rgb(255,255,255);
+        
+        border-radius: 4px;
+        border: none;
+        width:45%;
+    }
+    form {
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    #confirmPayment {
+        margin-left: 10px;
+        width: 95%;
+    }
+    .paymentDetails {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 0px;
+    }
+    .methoOfPayment{
+        margin-bottom:0px;
+    }
+    .donateFormButtons > div {
+        width: 100%;
+    }
+    .donateFormButtons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+    .home{
+        margin-top:0px;
+        margin-left:10px;
+    }
+    .homeButton {
+       
+        padding-left: 160px;
+    }
+}
+
+
