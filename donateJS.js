@@ -8,6 +8,7 @@ const donation_Form = document.getElementById("donationForm");
 const txtamount = document.getElementsByName("amount");
 const txtdonation_Amount = document.getElementById("donatedAmount");
 const name = document.getElementById("name");
+const address = document.getElementById("address");
 const exp_Date = document.getElementById("expDate");
 const card_Number = document.getElementById("cardNumber");
 const cvc_cvv_Number = document.getElementById("cvc");
@@ -33,6 +34,7 @@ function init() {
 
 function checkAmount() {
     event.preventDefault();
+    amount = 0;
     if (checkExpired != false) {
         switch (this.value) {
             case "LKR 100.00":
@@ -86,18 +88,23 @@ function validate() {
             if (myArray1[1] > month) {
                 validation_message[2].innerText = null;
                 checkExpired = true;
+                if (amount == 0) {
+                    detect_Invalid.innerText = null;
+                    detect_Invalid_Amount.innerText = `Please Select Amount to Donate`;
                 }
+            }
+            
             else {
                 validation_message[2].innerText = "Card is expired";
                 detect_Invalid.innerText = "Cannot Donate Amount as your card is Invalid!";
-             }
+            }
         }
         else {
             validation_message[2].innerText = "Card is expired";
         }
         console.log(checkExpired);
         if (checkExpired == true) {
-            if (txtdonation_Amount.innerText.length == 0) {
+            if ((txtdonation_Amount.innerText.length == 0) ||(amount==0)){
                 console.log("true");
                 detect_Invalid.innerText = null;
                 detect_Invalid_Amount.innerText = `Please Select Amount to Donate`;
@@ -110,9 +117,12 @@ function validate() {
                 card_Number.value = " ";
                 cvc_cvv_Number.value = " ";
                 detect_Invalid_Amount.innerText = " ";
+                address.value = " "
             }
            
+
         }
+        
         
        
     }
