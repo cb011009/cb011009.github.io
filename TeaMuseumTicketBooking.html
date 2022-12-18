@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tea Museum Ticket Booking Page</title>
+    <title>Donation Form</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="homeImages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="homeImages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="homeImages/favicon-16x16.png">
+    <link rel="manifest" href="homeImages/site.webmanifest">
+    <link rel="mask-icon" href="homeImages/safari-pinned-tab.svg" color="#23a467">
+    <link rel="shortcut icon" href="homeImages/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="homeImages/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="TicketBooking.css" />
+</head>
+<body>
+   
+    <form id="ticketBookingForm">
+        <fieldset>
+            <h2>DATE</h2>
+            <hr id="line" />
+            <div>
+                <p id="sentence">
+                    When will you be visiting? &nbsp &nbsp &nbsp
+                    <label for="visitDate"> </label>
+                    <input type="date" id="visitDate" name="visitDate" required><br />
+                    <span id="dateValidation"></span>
+                </p>
+            </div>
+        </fieldset>
+
+        <fieldset>
+
+            <h2>GUESTS</h2>
+            <hr id="line" />
+            <div>
+                <p>
+                    Full Name<br />
+                    <label for="fullName"> Same as on your ID</label><br>
+                    <input type="text" id="fullName" name="fullName" required><br />
+                    <span id="nameValidity"></span>
+                  
+                </p>
+                <p>
+                    Mobile Number<br />
+                    <label for="mobileNumber"> We may reach out for booking updates here over SMS/Whatsapp</label><br>
+                    <input type="text" id="mobileNumber" name="mobileNumber" required>
+                    <span id="mobileValidity"></span>
+                 
+                </p>
+                <p>
+                    Email<br />
+                    <label for="email">we'll send your tickets here</label><br />
+                    <input type="email" id="email" name="email" required><br />
+                    <span id="verify1"></span>
+                  
+                </p>
+                <p>
+                    Confirm Email<br />
+                    <label for="confirmEmail">Just to ensure we've got this right</label><br />
+                    <input type="email" id="confirmEmail" name="confirmEmail" required><br />
+                    <span id="verify"></span>
+                   
+                </p>
+
+                <p>
+                    Select Gender<br />
+                    <label for="gender">Optional *</label><br />
+                    <select name="gender" id="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </p>
+            </div>
+
+            <hr id="line" />
+            <h2>Tickets</h2>
+            <div>
+                <p>
+                    SL ADULT(Above 14 yrs)<br />
+                    <label for="SLadult" class="price">LKR 1200.00</label><br />
+                    <input type="number" id="SLadult" name="TicketType" min="0" value="0" required />
+                </p>
+                <p>
+                    SL CHILD(3-14 yrs)<br />
+                    <label for="SLchild">LKR 700.00</label><br />
+                    <input type="number" id="SLchild" name="TicketType" min="0" value="0" required />
+                </p>
+                <p>
+                    FOREIGN ADULT(Above 14 yrs)<br />
+                    <label for="foriegnAdult" class="price">LKR 5500.00</label><br />
+                    <input type="number" id="foriegnAdult" name="TicketType" min="0" value="0" required />
+                </p>
+                <p>
+                    FOREIGN CHILD (3-14 yrs)<br />
+                    <label for="foriegnChild" class="price">LKR 2700.00</label><br />
+                    <input type="number" id="foriegnChild" name="TicketType" min="0" value="0" required />
+                </p>
+                <p>
+                    INFANT (Below 3 yrs)<br />
+                    <label for="infant" class="price">FREE</label><br />
+                    <input type="number" id="infant" name="TicketType" min="0" value="0" required />
+                </p>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <h2>DURATION</h2>
+            <hr id="line" />
+            <div>
+                <p id="sentence">
+                    How long will your visit be? &nbsp &nbsp &nbsp
+                    <label for="duration"></label>
+                    <select name="duration" id="duration" value="3 hrs">
+                        <option value="3 Hours"> 3 hrs</option>
+                        <option value="Half Day"> Half Day</option>
+                        <option value="Full Day">Full Day</option>
+                    </select>
+                </p>
+            </div>
+        </fieldset>
+
+
+        <p class="order">CURRENT ORDER:</p>
+        <fieldset>
+            <table class="currentAmt">
+                <tr>
+                    <th class="category">CATEGORY</th>
+                    <th class="numOfTickets"> NO. OF TICKETS</th>
+                </tr>
+
+                <tr>
+                    <td>SL Adult Ticket</td>
+                    <td name="numOfTickets">0</td>
+                </tr>
+                <tr>
+                    <td>SL Child Ticket</td>
+                    <td name="numOfTickets">0</td>
+                </tr>
+                <tr>
+                    <td>Foriegn Adult Ticket</td>
+                    <td name="numOfTickets">0</td>
+                </tr>
+                <tr>
+                    <td>Foriegn Child Ticket</td>
+                    <td name="numOfTickets">0</td>
+                </tr>
+                <tr>
+                    <td>Infant Ticket</td>
+                    <td name="numOfTickets">0</td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="currentDuration"> 3 Hours</td>
+                </tr>
+
+            </table>
+            <hr />
+            <span id="orderValidation"></span>
+            <p id="currentOrder">Current Cost: LKR 0.00<br /><hr /></p>
+            <p>
+                <button type="button" id="addOrder">Add to order</button>
+                <button type="button" id="addToFavorite">Add to Favourites</button>
+                <button type="button" id="orderFavorite">Order Favourite</button>
+            </p>
+
+        </fieldset>
+        
+        
+        <p class="order">OVERALL ORDER:</p>
+
+        <fieldset>
+            <p id="overallOrder" class="output">Overall Cost: LKR 0.00<br /><hr /></p>
+            <p id="totNumOfItems" class="items"></p>
+            <button type="submit" id="placeOrder">Place Order</button>
+            <button type="button" id="loyaltyPoints">Check Loyalty Point</button>
+            <a href="index.html" target="_blank" class="BookTicketButton" type="button"> Home</a>
+        </fieldset>
+
+    </form>
+
+    <footer>
+        <!--Refernces-->
+        <!---www.lovesrilanka.org. (2020). Ceylon Tea Museum - Love Sri Lanka.
+        [online] Available at: https://www.lovesrilanka.org/ceylon-tea-museum/.
+        [Accessed: 15th september 2022].-->
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
