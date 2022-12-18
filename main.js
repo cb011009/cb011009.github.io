@@ -106,9 +106,7 @@ function user_Details() {
             visit_Date.value = date;
             valid_Date_message.innerText = "Invalid Date, date has already passed";
         }
-        
-        
-
+       
         email = user_email.value;
         confirmEmail = confirm_user_email.value;
         if (email != confirmEmail) {

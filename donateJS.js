@@ -33,33 +33,33 @@ function init() {
 
 function checkAmount() {
     event.preventDefault();
-    switch (this.value) {
     if (checkExpired != false) {
-        case "LKR 100.00":
-            amount = 100.00;
+        switch (this.value) {
+            case "LKR 100.00":
+                amount = 100.00;
 
-            break;
-        case "LKR 500.00":
-            amount = 500.00;
+                break;
+            case "LKR 500.00":
+                amount = 500.00;
 
-            break;
-        case "LKR 1000.00":
-            amount = 1000.00;
+                break;
+            case "LKR 1000.00":
+                amount = 1000.00;
 
-            break;
-        case "LKR 2000.00":
-            amount = 2000.00;
+                break;
+            case "LKR 2000.00":
+                amount = 2000.00;
 
-            break;
-        case "LKR 5000.00":
-            amount = 5000.00;
+                break;
+            case "LKR 5000.00":
+                amount = 5000.00;
 
-            break;
-        case "LKR 10000.00":
-            amount = 10000.00;
-    }
-    detect_Invalid_Amount.innerText = null;
-    txtdonation_Amount.innerText = `You have selected : LKR ${amount.toFixed(2)}`;
+                break;
+            case "LKR 10000.00":
+                amount = 10000.00;
+        }
+        detect_Invalid_Amount.innerText = null;
+        txtdonation_Amount.innerText = `You have selected : LKR ${amount.toFixed(2)}`;
     }
     else {
       
@@ -89,7 +89,7 @@ function validate() {
                 }
             else {
                 validation_message[2].innerText = "Card is expired";
-                detect_Invalid.innerText = "Cannot Donate Amount as your card is Invalid";
+                detect_Invalid.innerText = "Cannot Donate Amount as your card is Invalid!";
              }
         }
         else {
@@ -103,14 +103,15 @@ function validate() {
                 detect_Invalid_Amount.innerText = `Please Select Amount to Donate`;
             }
             if (amount > 0) {
-                 alert(`You have successfully donated LKR ${amount.toFixed(2)}.Thankyou!`);
-                 txtdonation_Amount.innerText = " ";
-                 name.value = " ";
-                 exp_Date.value = " ";
-                 card_Number.value = " ";
-                 cvc_cvv_Number.value = " ";
-                 detect_Invalid_Amount.innerText = " ";
+                alert(`You have successfully donated LKR ${amount.toFixed(2)}.Thankyou!`);
+                txtdonation_Amount.innerText = " ";
+                name.value = " ";
+                exp_Date.value = " ";
+                card_Number.value = " ";
+                cvc_cvv_Number.value = " ";
+                detect_Invalid_Amount.innerText = " ";
             }
+           
         }
         
        
