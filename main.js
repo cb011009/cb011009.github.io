@@ -341,6 +341,11 @@ function placeOrder() {
             alert(`Order is successful! Enjoy your visit to the Ceylon Tea Museum!`);
             overall_Order.innerText = `Overall Cost: LKR 0.00`;
             total_Num_of_Items.innerText = " ";
+            visit_Date.value=" ";
+            full_Name.value=" ";
+            mobile_Number.value=" ";
+            user_email.value=" ";
+            confirm_user_email.value=" ";
         }
         else {
             alert(`Please order tickets for transaction to take place`);
