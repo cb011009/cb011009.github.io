@@ -107,21 +107,7 @@ function user_Details() {
             valid_Date_message.innerText = "Invalid Date, date has already passed";
         }
         
-        fullName = full_Name.value;
-        let myStrArray = fullName.split(" ");
-        console.log(myStrArray.length);
-        for (i = 0; i < myStrArray.length; i++) {
-            let check = /^[a-zA-Z]+$/.test(myStrArray[i]);
-            if (check == false) {
-                validate_Name.innerText = "Enter a valid name";
-              
-                full_Name.value = null;
-                break;
-            }
-            else {
-                validate_Name.innerText = null;
-            }
-        }
+        
 
         email = user_email.value;
         confirmEmail = confirm_user_email.value;
