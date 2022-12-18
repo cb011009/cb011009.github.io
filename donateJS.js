@@ -21,7 +21,7 @@ window.addEventListener("load", init);
 exp_Date.addEventListener("change", validate);
 txtamount.forEach(item1 => item1.addEventListener("click", checkAmount));
 confirm_Payment.addEventListener("click", validate);
-//validation_message.forEach(item2 => item2.addEventListener("click", validate));
+
 
 
 function init() {
@@ -34,6 +34,7 @@ function init() {
 function checkAmount() {
     event.preventDefault();
     switch (this.value) {
+    if (checkExpired != false) {
         case "LKR 100.00":
             amount = 100.00;
 
@@ -59,7 +60,12 @@ function checkAmount() {
     }
     detect_Invalid_Amount.innerText = null;
     txtdonation_Amount.innerText = `You have selected : LKR ${amount.toFixed(2)}`;
-    
+    }
+    else {
+      
+        alert("Invalid Card! Cannot Select Amount to Donate!");
+        txtdonation_Amount.innerText =null;
+    }
 }
 
 function validate() {
@@ -97,7 +103,13 @@ function validate() {
                 detect_Invalid_Amount.innerText = `Please Select Amount to Donate`;
             }
             if (amount > 0) {
-                txtdonation_Amount.innerText = `You have successfully donated LKR ${amount.toFixed(2)}.Thankyou!`;
+                 alert(`You have successfully donated LKR ${amount.toFixed(2)}.Thankyou!`);
+                 txtdonation_Amount.innerText = " ";
+                 name.value = " ";
+                 exp_Date.value = " ";
+                 card_Number.value = " ";
+                 cvc_cvv_Number.value = " ";
+                 detect_Invalid_Amount.innerText = " ";
             }
         }
         
