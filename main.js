@@ -296,7 +296,7 @@ function output_Overall_Order() {
     current_duration.innerText = `3 Hours`;
     current_Order.innerText = `Current Cost: LKR ${(0).toFixed(2)}`;
 
-    if (overallNumberOfTickets == 0) {//it starts here//
+    if (((overallNumberOfTickets == 0)||(overallCost!=0)) && (currentCost>0)) {
 
         overallCost = overallCost + currentCost;
 
