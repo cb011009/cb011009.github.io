@@ -51,6 +51,7 @@ const place_Order_Btn = document.getElementById("placeOrder");
 window.addEventListener("load", init);
 visit_Date.addEventListener("change", user_Details);
 full_Name.addEventListener("change", user_Details);
+user_email.addEventListener("change", user_Details);
 confirm_user_email.addEventListener("change", user_Details);
 SL_Adult.addEventListener("change", calculateCost);
 SL_Child.addEventListener("change", calculateCost);
@@ -86,7 +87,7 @@ function init() {
  }
 
 function user_Details() {
-    if (theForm.checkValidity()) {
+    //if (theForm.checkValidity()) {
         event.preventDefault();
 
         total_Num_of_Items.innerText = null;
@@ -109,22 +110,21 @@ function user_Details() {
        
         email = user_email.value;
         confirmEmail = confirm_user_email.value;
-        if (email != confirmEmail) {
-
-            verify_message.innerText = `The Email Confirmation does not match`;
-            verify1_message1.innerText = `The Email Confirmation does not match`;
-            user_email.value = null;
-            confirm_user_email.value = null;
+        if ((email.length != 0) && (confirmEmail.length != 0)) {
+            console.log("hello");
+            if (email != confirmEmail) {
+                verify_message.innerText = `The Email Confirmation does not match`;
+                verify1_message1.innerText = `The Email Confirmation does not match`;
+                user_email.value = null;
+                confirm_user_email.value = null;
+            }
+            else {
+                verify_message.innerText = null;
+                verify1_message1.innerText = null;
+            }
 
         }
-        else {
-            verify_message.innerText = null;
-            verify1_message1.innerText = null;
-        }
-
-
-    }
-    
+     
    
 }
 
