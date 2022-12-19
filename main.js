@@ -204,8 +204,10 @@ function addFavorite() {
     favorite.foriegn_Child_Ticket = foriegnChild;
     favorite.infant_Ticket = Infant;
     favorite.duration = duration;
+    
+    let current = parseInt(SL_Adult.value) + parseInt(SL_Child.value) + parseInt(foriegn_Adult.value) + parseInt(foriegn_Child.value) + parseInt(infant.value);
  
-    if (totalNumberOfTickets > 0) {
+    if ((totalNumberOfTickets > 0)&&(current!=0)) {
         strFavorite = JSON.stringify(favorite);
         console.log(strFavorite);
         localStorage.setItem("newFavorite", strFavorite);
