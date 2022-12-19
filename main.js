@@ -262,7 +262,7 @@ function OrderFavorite() {
     
     let checkZeroItems = newFavoriteObj.SL_Adult_Ticket + newFavoriteObj.foriegn_Adult_Ticket + newFavoriteObj.foriegn_Child_Ticket + newFavoriteObj.SL_Child_Ticket + newFavoriteObj.infant_Ticket;
     if (checkZeroItems != 0) {
-        total_Num_of_Items.innerText = `${total_Num_of_Items.innerText} \n SL Adult Ticket: ${newFavoriteObj.SL_Adult_Ticket} \n SL Child Ticket:${newFavoriteObj.SL_Child_Ticket} \n Foriegn Adult Ticket:${newFavoriteObj.foriegn_Adult_Ticket} \n Foriegn Child Ticket:${newFavoriteObj.foriegn_Child_Ticket} \n Infant Ticket: ${newFavoriteObj.infant_Ticket} \n Duration: ${newFavoriteObj.duration} \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - -`;
+        total_Num_of_Items.innerText = `${total_Num_of_Items.innerText} \n SL Adult Ticket: ${newFavoriteObj.SL_Adult_Ticket} \n SL Child Ticket:${newFavoriteObj.SL_Child_Ticket} \n Foriegn Adult Ticket:${newFavoriteObj.foriegn_Adult_Ticket} \n Foriegn Child Ticket:${newFavoriteObj.foriegn_Child_Ticket} \n Infant Ticket: ${newFavoriteObj.infant_Ticket} \n Duration: ${newFavoriteObj.duration} \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - ORDER IS A FAVORITE`;
         overallCost = overallCost + favoriteCost + favoriteTotDuration;
         overall_Order.innerText = `Overall Cost: LKR ${overallCost.toFixed(2)}`;
     }
